@@ -1,6 +1,7 @@
 import 'package:chow_500/utils/app_colors.dart';
 import 'package:chow_500/utils/app_images.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class TrackOrder extends StatelessWidget {
   const TrackOrder({super.key});
@@ -12,7 +13,30 @@ class TrackOrder extends StatelessWidget {
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Stack(children: [Image.asset(AppImages.mapImage)]),
+          Stack(
+            children: [
+              Image.asset(AppImages.mapImage),
+              Positioned(
+                top: 40,
+                left: 30,
+                child: GestureDetector(
+                  onTap: () {
+                    Get.back();
+                  },
+                  child: Container(
+                    decoration: BoxDecoration(
+                      color: AppColors.white,
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Icon(Icons.arrow_back_ios_new_rounded),
+                    ),
+                  ),
+                ),
+              ),
+            ],
+          ),
           SizedBox(height: 20),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 16),
