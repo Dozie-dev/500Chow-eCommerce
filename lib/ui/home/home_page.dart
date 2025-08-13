@@ -49,20 +49,38 @@ class _HomePageState extends State<HomePage> {
             child: Column(
               children: [
                 Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 32),
+                  padding: const EdgeInsets.symmetric(vertical: 30),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      SizedBox(
-                        width: 300,
-                        child: Text(
-                          'Order Your Favourite Fast Food!',
-                          style: TextStyle(
-                            fontSize: 25,
-                            fontWeight: FontWeight.bold,
-                            wordSpacing: 2,
+                      Row(
+                        children: [
+                          Icon(
+                            Icons.location_on_outlined,
+                            color: AppColors.primaryColor,
+                            size: 30,
                           ),
-                        ),
+                          SizedBox(width: 10),
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                'DELIVERY LOCATION',
+                                style: TextStyle(
+                                  fontSize: 12,
+                                  fontWeight: FontWeight.w400,
+                                ),
+                              ),
+                              Text(
+                                '4140 Parker Rd. Allentown NY',
+                                style: TextStyle(
+                                  fontSize: 12,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ],
                       ),
                       Container(
                         decoration: BoxDecoration(
@@ -72,7 +90,7 @@ class _HomePageState extends State<HomePage> {
                         child: Padding(
                           padding: const EdgeInsets.all(10.0),
                           child: Icon(
-                            Icons.notifications,
+                            Icons.person,
                             color: AppColors.primaryColor,
                             size: 27,
                           ),
@@ -149,42 +167,42 @@ class _HomePageState extends State<HomePage> {
                     ],
                   ),
                 ),
-                SizedBox(height: 20),
-                SizedBox(
-                  height: 100,
-                  child: ListView.builder(
-                    itemCount: foodItems.length,
-                    scrollDirection: Axis.horizontal,
-                    itemBuilder: (context, index) {
-                      final items = foodItems[index];
-                      return Padding(
-                        padding: const EdgeInsets.only(right: 15),
-                        child: Container(
-                          width: 90,
-                          decoration: BoxDecoration(
-                            color: AppColors.greyCont,
-                            borderRadius: BorderRadius.circular(10),
-                          ),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Image.asset(items.image, height: 70),
-                              Text(
-                                items.title,
-                                style: TextStyle(
-                                  fontSize: 14,
-                                  color: AppColors.black,
-                                  fontWeight: FontWeight.bold,
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      );
-                    },
-                  ),
-                ),
+                // SizedBox(height: 20),
+                // SizedBox(
+                //   height: 100,
+                //   child: ListView.builder(
+                //     itemCount: foodItems.length,
+                //     scrollDirection: Axis.horizontal,
+                //     itemBuilder: (context, index) {
+                //       final items = foodItems[index];
+                //       return Padding(
+                //         padding: const EdgeInsets.only(right: 15),
+                //         child: Container(
+                //           width: 90,
+                //           decoration: BoxDecoration(
+                //             color: AppColors.greyCont,
+                //             borderRadius: BorderRadius.circular(10),
+                //           ),
+                //           child: Column(
+                //             crossAxisAlignment: CrossAxisAlignment.center,
+                //             mainAxisAlignment: MainAxisAlignment.center,
+                //             children: [
+                //               Image.asset(items.image, height: 70),
+                //               Text(
+                //                 items.title,
+                //                 style: TextStyle(
+                //                   fontSize: 14,
+                //                   color: AppColors.black,
+                //                   fontWeight: FontWeight.bold,
+                //                 ),
+                //               ),
+                //             ],
+                //           ),
+                //         ),
+                //       );
+                //     },
+                //   ),
+                // ),
                 SizedBox(height: 20),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -202,7 +220,7 @@ class _HomePageState extends State<HomePage> {
                 ),
                 SizedBox(height: 10),
                 SizedBox(
-                  height: 300,
+                  height: 245,
                   child: ListView.builder(
                     itemCount: foodList.length,
                     scrollDirection: Axis.horizontal,
@@ -258,6 +276,21 @@ class _HomePageState extends State<HomePage> {
                       );
                     },
                   ),
+                ),
+                SizedBox(height: 10),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      'Shops Near You',
+                      style: TextStyle(
+                        color: AppColors.black,
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    Text('See all'),
+                  ],
                 ),
               ],
             ),

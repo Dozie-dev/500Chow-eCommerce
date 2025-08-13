@@ -7,4 +7,6 @@ class AppImages {
   static const String burgerfull = 'assets/images/burgerfull.jpg';
   static const String totalsales = 'assets/images/total-sales.png';
   static const String linegraph = 'assets/images/line-graph.png';
+  static const String weeklyPrice = 'assets/images/weekly-price.png';
+  static const String mapImage = 'assets/images/map-image.jpg';
 }

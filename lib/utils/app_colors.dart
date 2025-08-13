@@ -11,4 +11,5 @@ class AppColors {
   static const Color contbord = Color(0xFFFFE5B4);
   static const Color blackCont = Colors.black87;
   static const Color greyCont = Color(0xFFE5E4E2);
+  static const Color contSmall = Color(0xFFEDC9AF);
 }

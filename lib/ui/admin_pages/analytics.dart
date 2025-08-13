@@ -227,7 +227,7 @@ class AnalyticsPage extends StatelessWidget {
                           Container(
                             height: 50,
                             width: 5,
-                            color: AppColors.black,
+                            color: Colors.greenAccent,
                           ),
                           SizedBox(width: 15),
                           Column(
