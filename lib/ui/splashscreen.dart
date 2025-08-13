@@ -1,4 +1,4 @@
-import 'package:chow_500/ui/common/bottom_bar.dart';
+import 'package:chow_500/ui/onboarding/onboarding_page.dart';
 import 'package:chow_500/utils/app_colors.dart';
 import 'package:chow_500/utils/app_images.dart';
 import 'package:flutter/material.dart';
@@ -16,7 +16,7 @@ class _SplashscreenState extends State<Splashscreen> {
   void initState() {
     super.initState();
     Future.delayed(Duration(seconds: 3), () async {
-      Get.to(const BtmNavBar());
+      Get.off(() => const OnboardingPage());
     });
   }
 
